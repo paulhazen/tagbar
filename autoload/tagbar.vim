@@ -992,7 +992,7 @@ function! s:CheckForExCtags(silent)
         if !exists('g:tagbar_ctags_bin')
             if has("win32unix")
                 echo 'Attempting to install ctags for cygwin'
-                execute '../scripts/install/cygwin.sh' 
+                execute 'bash ../scripts/install/cygwin.sh' 
                 call s:CheckForExCTags()
             endif
             if !a:silent
